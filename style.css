@@ -1,0 +1,280 @@
+/* ========= RESET ========= */
+ 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+ 
+body{
+    font-family:Poppins,sans-serif;
+    background:#0f172a;
+    color:white;
+    height:100vh;
+    overflow:hidden;
+}
+ 
+/* ========= HEADER ========= */
+ 
+.topbar{
+    height:60px;
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    box-shadow:0 0 15px rgba(0,0,0,.5);
+}
+ 
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:24px;
+    color:#38bdf8;
+    font-weight:bold;
+}
+ 
+.toolbar{
+    display:flex;
+    gap:10px;
+}
+ 
+button{
+    border:none;
+    border-radius:10px;
+    background:#334155;
+    color:white;
+    padding:10px 15px;
+    cursor:pointer;
+    transition:.2s;
+}
+ 
+button:hover{
+    background:#0ea5e9;
+    transform:translateY(-2px);
+}
+ 
+/* ========= LAYOUT ========= */
+ 
+.app{
+ 
+    display:grid;
+ 
+    grid-template-columns:70px 1fr 200px;
+ 
+    height:calc(100vh - 60px);
+ 
+}
+ 
+/* ========= LEFT ========= */
+ 
+.sidebar{
+ 
+    background:#1e293b;
+ 
+    display:flex;
+ 
+    flex-direction:column;
+ 
+    align-items:center;
+ 
+    gap:15px;
+ 
+    padding:15px;
+ 
+}
+ 
+.tool{
+ 
+    width:50px;
+ 
+    height:50px;
+ 
+    font-size:20px;
+ 
+}
+ 
+/* ========= CENTER ========= */
+ 
+.editor{
+ 
+    display:flex;
+ 
+    justify-content:center;
+ 
+    align-items:center;
+ 
+    background:#111827;
+ 
+    overflow:auto;
+ 
+}
+ 
+/* El lienzo ocupa casi toda la pantalla */
+ 
+.canvasWrapper{
+ 
+    width:100%;
+ 
+    height:100%;
+ 
+    display:flex;
+ 
+    justify-content:center;
+ 
+    align-items:center;
+ 
+    overflow:auto;
+ 
+    padding:15px;
+ 
+}
+ 
+/* ========= GRID ========= */
+ 
+#grid{
+ 
+    display:grid;
+ 
+    background:white;
+ 
+    border:4px solid #444;
+ 
+    box-shadow:0 0 25px rgba(0,0,0,.5);
+ 
+}
+ 
+/* ========= PIXELS ========= */
+ 
+.pixel{
+ 
+    width:18px;
+ 
+    height:18px;
+ 
+    background:white;
+ 
+    border:1px solid #eee;
+ 
+}
+ 
+.pixel:hover{
+ 
+    outline:1px solid #38bdf8;
+ 
+}
+ 
+/* ========= RIGHT ========= */
+ 
+.properties{
+ 
+    background:#1e293b;
+ 
+    padding:15px;
+ 
+    overflow:auto;
+ 
+}
+ 
+.properties h2{
+ 
+    margin:15px 0 10px;
+ 
+    font-size:18px;
+ 
+}
+ 
+input[type=color]{
+ 
+    width:100%;
+ 
+    height:45px;
+ 
+    border:none;
+ 
+}
+ 
+select{
+ 
+    width:100%;
+ 
+    padding:10px;
+ 
+    border-radius:8px;
+ 
+    border:none;
+ 
+    margin-top:10px;
+ 
+    margin-bottom:15px;
+ 
+}
+ 
+/* ========= PALETTE ========= */
+ 
+.palette{
+ 
+    display:grid;
+ 
+    grid-template-columns:repeat(5,1fr);
+ 
+    gap:8px;
+ 
+}
+ 
+.swatch{
+ 
+    width:34px;
+ 
+    height:34px;
+ 
+    border-radius:8px;
+ 
+    border:2px solid white;
+ 
+    cursor:pointer;
+ 
+    transition:.2s;
+ 
+}
+ 
+.swatch:hover{
+ 
+    transform:scale(1.15);
+ 
+}
+ 
+/* ========= STATUS ========= */
+ 
+.status{
+ 
+    background:#334155;
+ 
+    border-radius:10px;
+ 
+    padding:12px;
+ 
+    line-height:1.8;
+ 
+}
+ 
+/* ========= FOOTER ========= */
+ 
+footer{
+ 
+    display:flex;
+ 
+    justify-content:space-between;
+ 
+    align-items:center;
+ 
+    background:#111827;
+ 
+    height:30px;
+ 
+    padding:0 15px;
+ 
+    font-size:12px;
+ 
+}
