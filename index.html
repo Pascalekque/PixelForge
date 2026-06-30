@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelForge</title>
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+ 
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+ 
+<header class="topbar">
+ 
+    <div class="logo">
+        <i class="fa-solid fa-palette"></i>
+        <span>PixelForge</span>
+    </div>
+ 
+    <div class="toolbar">
+ 
+        <button id="newBtn">
+            <i class="fa-solid fa-file"></i>
+            New
+        </button>
+ 
+        <button id="saveBtn">
+            <i class="fa-solid fa-floppy-disk"></i>
+            Save
+        </button>
+ 
+        <button id="undoBtn">
+            <i class="fa-solid fa-rotate-left"></i>
+            Undo
+        </button>
+ 
+        <button id="redoBtn">
+            <i class="fa-solid fa-rotate-right"></i>
+            Redo
+        </button>
+ 
+    </div>
+ 
+</header>
+ 
+<div class="app">
+ 
+    <!-- LEFT -->
+ 
+    <aside class="sidebar">
+ 
+        <h2>Tools</h2>
+ 
+        <button id="drawTool" class="tool active">
+            <i class="fa-solid fa-pencil"></i>
+        </button>
+ 
+        <button id="eraserTool" class="tool">
+            <i class="fa-solid fa-eraser"></i>
+        </button>
+ 
+        <button id="bucketTool" class="tool">
+            <i class="fa-solid fa-fill-drip"></i>
+        </button>
+ 
+        <button id="pickerTool" class="tool">
+            <i class="fa-solid fa-eye-dropper"></i>
+        </button>
+ 
+        <button id="zoomInTool" class="tool">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </button>
+ 
+        <button id="zoomOutTool" class="tool">
+            <i class="fa-solid fa-magnifying-glass-minus"></i>
+        </button>
+ 
+        <button id="clearTool" class="tool">
+            <i class="fa-solid fa-trash"></i>
+        </button>
+ 
+    </aside>
+ 
+    <!-- CENTER -->
+ 
+    <main class="editor">
+ 
+        <div class="canvasWrapper">
+ 
+            <div id="grid"></div>
+ 
+        </div>
+ 
+    </main>
+ 
+    <!-- RIGHT -->
+ 
+    <aside class="properties">
+ 
+        <h2>Color</h2>
+ 
+        <input
+            type="color"
+            id="colorPicker"
+            value="#ff0000">
+ 
+        <h2>Quick Palette</h2>
+ 
+        <div class="palette">
+ 
+            <div class="swatch" data-color="#000000"></div>
+            <div class="swatch" data-color="#ffffff"></div>
+            <div class="swatch" data-color="#ff0000"></div>
+            <div class="swatch" data-color="#00ff00"></div>
+            <div class="swatch" data-color="#0000ff"></div>
+            <div class="swatch" data-color="#ffff00"></div>
+            <div class="swatch" data-color="#ff00ff"></div>
+            <div class="swatch" data-color="#00ffff"></div>
+            <div class="swatch" data-color="#ff8800"></div>
+            <div class="swatch" data-color="#8b5cf6"></div>
+ 
+        </div>
+ 
+        <h2>Canvas Size</h2>
+ 
+        <select id="canvasSize">
+ 
+            <option value="16">16 × 16</option>
+            <option value="32">32 × 32</option>
+            <option value="64" selected>64 × 64</option>
+            <option value="96">96 × 96</option>
+            <option value="128">128 × 128</option>
+ 
+        </select>
+ 
+        <button id="applySize">
+ 
+            Apply Size
+ 
+        </button>
+ 
+        <h2>Zoom</h2>
+ 
+        <div class="zoomControls">
+ 
+            <button id="zoomMinus">−</button>
+ 
+            <span id="zoomValue">100%</span>
+ 
+            <button id="zoomPlus">+</button>
+ 
+        </div>
+ 
+        <h2>Status</h2>
+ 
+        <div class="status">
+ 
+            <p>Tool: <span id="toolName">Draw</span></p>
+ 
+            <p>Canvas: <span id="canvasInfo">64 × 64</span></p>
+ 
+            <p>Pixels: <span id="pixelCount">4096</span></p>
+ 
+            <p>Position: <span id="mousePos">0, 0</span></p>
+ 
+        </div>
+ 
+    </aside>
+ 
+</div>
+ 
+<footer>
+ 
+    <span>PixelForge © 2026</span>
+ 
+    <span>Modern Pixel Art Studio</span>
+ 
+</footer>
+ 
+<script src="script.js"></script>
+ 
+</body>
+</html>
